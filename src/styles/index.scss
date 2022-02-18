@@ -1,0 +1,185 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+label {
+  font-weight: 700;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+#app {
+  height: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+div:focus {
+  outline: none;
+}
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+/*commoon*/
+.p-r{
+  position: relative;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.ml-10{
+  margin-left: 10px;
+}
+.ml-50{
+  margin-left: 50px;
+}
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex_strat{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.text_2line{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+//input[type="number"] {
+//  -moz-appearance: textfield;
+//}
+.text_center{
+  text-align: center;
+}
+.page_container {
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px -10px 40px 0px rgba(0, 0, 0, 0.1);
+  .page_title {
+    position: relative;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #ebebeb;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 20px;
+      background: #287CFA;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    .addItemBtn{
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 36px;
+      line-height: 36px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  /*switch文字置于内侧*/
+  .tableSwitch{
+    &.el-switch{
+      display: block;
+      position: relative;
+    }
+    .el-switch__label *{
+      white-space: nowrap;
+      font-size: 12px;
+    }
+    .el-switch__label--left {
+      position: relative;
+      left: 45px;
+      color: #fff;
+      z-index: -1111;
+    }
+    .el-switch__core{
+      width:50px !important;
+    }
+    .el-switch__label--right {
+      position: relative;
+      right: 54px;
+      color: #fff;
+      z-index: -1111;
+    }
+    .el-switch__label--right.is-active {
+      position: absolute;
+      top: 1px;
+      left: 0px;
+      z-index: 1;
+      color: #fff !important;
+    }
+    .el-switch__label--left.is-active {
+      z-index: 1111;
+      color: #9c9c9c !important;
+    }
+  }
+  .page_pagination {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .el-table th,
+  .el-table td{
+    text-align: center;
+  }
+  /*线装按钮修改聚焦样式*/
+  .el-button--danger.is-plain:focus{
+    color: #F56C6C;
+    background: #fef0f0;
+    border-color: #fbc4c4;
+  }
+  .el-button--primary.is-plain:focus{
+    color: #409EFF;
+    border-color: #c6e2ff;
+    background-color: #ecf5ff;
+  }
+}
